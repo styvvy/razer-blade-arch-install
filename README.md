@@ -39,7 +39,7 @@ reflector --country Germany,Austria --age 12 --protocol http --sort rate --save 
 
 ### install the base system
 ```
-pacstrap /mnt base base-devel linux linux-headers linux-firmware grub efibootmgr networkmanager ntp openssh neovim neofetch
+pacstrap /mnt base base-devel linux linux-headers linux-firmware grub efibootmgr networkmanager ntp openssh neovim neofetch python3
 ```
 
 ### generate the partition table
