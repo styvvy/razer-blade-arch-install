@@ -37,6 +37,11 @@ timedatectl set-ntp true
 reflector --country Germany,Austria --age 12 --protocol http --sort rate --save /etc/pacman.d/mirrorlist
 ```
 
+## update pacman.conf for parallel downloading
+```
+sed -i "s/#ParallelDownloads = 5/ParallelDownloads = 15/g" /etc/pacman.conf && sudo pacman -Sy
+```
+
 ### install the base system
 ```
 pacstrap /mnt base base-devel linux linux-headers linux-firmware grub efibootmgr networkmanager ntp openssh neovim neofetch python3
